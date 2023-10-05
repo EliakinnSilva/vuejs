@@ -1,0 +1,68 @@
+<!-- Direitiva V-bind -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vue.js"></script>
+	<style type="text/css">
+		.vermelho {
+			color: red;
+			font-weight: bold;
+		}
+        .azul{
+            color:blue
+        }
+        .italico{
+            font-style: italic;
+        }
+	</style>
+	<title>Aula VUE</title>
+</head>
+<body>
+    <!-- Diretiva -->
+	<h1>Aula VUE</h1>
+	<div id="app">
+        
+        <input type="text" v-on:keyup="imprimir()"><br>
+        <input type="text" @keyup="retornar('Enviando parâmetro', 5, x)"><br>
+        <button @click="alerta()">Click aqui</button>
+        <button @click="captura($event,'texto',150)">Click aqui Também</button>
+
+		
+	</div>
+	<script>
+		
+		new Vue(options = {
+            el: '#app',
+            data: {
+                x: true,
+                y:'valor Y'
+            },
+        
+        
+			methods: {
+                imprimir(){
+                    console.log('Teste')
+                },
+                retornar(tx, n ,x){
+                    console.log(tx),
+                    console.log(n),
+                    console.log(x),
+                    console.log(this.y)
+
+                },
+                alerta() {
+                    alert( "mensagem de alerta")
+                },
+                captura(evento, p1, p2){
+                    console.log(evento, p1, p2)
+
+                }
+            }
+		})
+
+
+	</script>
+</body>
+</html>

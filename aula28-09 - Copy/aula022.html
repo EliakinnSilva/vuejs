@@ -1,0 +1,39 @@
+<!-- Direitiva V-bind -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vue.js"></script>
+	<style type="text/css">
+		.vermelho {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+	<title>Aula VUE</title>
+</head>
+<body>
+	<h1>Aula VUE</h1>
+	<div id="app">
+		<a v-bind:href="site">Site</a>
+		<p :class="cor">Entendendo a diretiva V-bind</p>
+		<input type="text" :placeholder="preenchimento">
+	</div>
+	<script>
+		
+		options = {
+			el: '#app',
+			data: {
+				site: 'https://davidbarreto.com.br',
+				preenchimento: 'Diretiva V-bind',
+				cor: 'vermelho'
+			},
+			methods: {}
+		}
+
+		new Vue(options)
+
+	</script>
+</body>
+</html>

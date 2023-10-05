@@ -1,0 +1,46 @@
+
+<!-- Criando métodos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vue.js"></script>
+	<title>Aula VUE</title>
+</head>
+<body>
+	<h1>Aula VUE</h1>
+	<div id="app">
+		{{ somar() }}<br>
+		{{ subtrair() }}<br>
+		{{ multiplicar() }}<br>
+		{{ dividir() }}<br>
+	</div>
+	<script>
+		
+		options = {
+			el: '#app',
+			data: {
+
+			},
+			methods: {
+				somar: function somar() { // convencional
+					return 4 + 2;
+				},
+				subtrair: function() { // anônima
+					return 4 - 2;
+				},
+				multiplicar: () => { // arrow function
+					return 4 * 2;
+				},
+				dividir() { // simplificada
+					return 4 / 2;
+				}
+			}
+		}
+
+		new Vue(options)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+!<!-- Direitiva V-bind -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vue.js"></script>
+	<style type="text/css">
+		.vermelho {
+			color: red;
+			font-weight: bold;
+		}
+        .azul{
+            color:blue
+        }
+        .italico{
+            font-style: italic;
+        }
+	</style>
+	<title>Aula VUE</title>
+</head>
+<body>
+	<h1>Aula VUE</h1>
+	<div id="app">
+        {{ mensagem}} <br>
+        {{ mensagem.length }} <br>
+        {{ mensagem.substr( 0, 5) }} <br>
+        <input  :value="mensagem" :class="1==2 ?'vermelho' :estilo">
+        <br><br>
+        <input  :value="mensagem" :class="teste ?'vermelho' :estilo">
+
+
+		
+	</div>
+	<script>
+		
+		new Vue(options = {
+            el: '#app',
+            data: {
+                mensagem: 'Expressão',
+                estilo: 'azul',
+                teste: true
+            },
+        
+        
+			methods: {}
+		})
+
+
+	</script>
+</body>
+</html>

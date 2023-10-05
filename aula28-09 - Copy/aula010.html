@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vue.js"></script>
+	<title>Aula VUE</title>
+</head>
+<body>
+	<h1>Aula VUE</h1>
+	<div id="app">
+		Mensagem: <b>{{ mensagem }}</b><br>
+		Valor Total: <b>{{ valorTotal }}</b><br>
+		Logado: <b>{{ logado }}</b><br>
+		Hobbie: <b>{{ hobbies[1] }}</b><br>
+		Perfil: <b>{{ perfil.site }}, {{perfil.cursos[0].nome}}</b><br>
+	</div>
+	<script>
+		
+		options = {
+			el: '#app',
+			data: {
+				mensagem: 'Bem vindos a primeira  aula de Vue.js',
+				valorTotal: 150.50,
+				logado: true,
+				hobbies: [
+					'dormir',
+					'comer',
+					'cochilar',
+					'estudar'
+					],
+				perfil: {
+					nome: 'David Barreto',
+					site: 'davidbarreto.com.br',
+					idade: 46,
+					sexo: 'masculino',
+					cursos: [
+							{nome: 'bootstrap', cargaHoraria: '50 horas'},
+							{nome: 'vue.js', cargaHoraria: '60 horas'}
+						]
+				}
+			}
+		}
+
+		new Vue(options)
+
+	</script>
+</body>
+</html>
